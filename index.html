@@ -128,7 +128,7 @@
 
         .flex-item-auto-margin {
             margin-right: auto;
-            /* This will push all the other items to the end of the container */
+            /* This will push all the other items to the end of the container, away from it's adjacent siblings. you can do this horizontaly and vertically using different margin types (top, bottom, left, right) */
         }
 
         /* Axis refers to whether it is a row or column (so a horizontal or veritcal axis) */
@@ -218,35 +218,21 @@
         <h1 class="title">FLEXBOX DEMO</h1>
         <img src="./resources/Images/flexarm.gif" alt="Gif 2" style="width: 20%; height: auto;transform: scaleX(-1);">
     </div>
-    <div class="flex-container explanation">
-        <p>Flexbox is a one dimensional CSS layout system as opposed to grids two. Rather than using floats,
-            inline-block, etc
-            to organize child elements in a parent container you use flexboxes awesome properties to neatly and often
-            more easily
-            align and organize these elements. Flexbox is great for smaller layouts like components within a page rather
-            than
-            for organizing the whole page itself. Flexbox is like arranging blocks in a line, where grid is like
-            building a
-            puzzle with rows and columns. Visit the resources at top for in depth explanations and a game. See the
-            examples
-            below for different flexbox CSS properties and what they do. I encourage you top view the code, add and
-            remove
-            elements and see how flexbox behaves compared to grid.
+    <div class="flex-container explanation flex-direction-column">
+        <p>Flexbox is a one-dimensional CSS layout system, as opposed to grids which are two-dimensional. Instead of
+            using techniques like floats or inline-block to arrange child elements within a parent container, Flexbox
+            gives you properties that make aligning and organizing these elements easier and more efficient. It's
+            particularly well-suited for smaller layouts, such as components within a page, rather than organizing the
+            entire page itself.
+            <hr>
+            To visualize it, think of Flexbox as arranging blocks in a line, while CSS Grid is like solving a puzzle
+            with rows and columns. For more in depth on Flexbox, check out the resources
+            listed at the top. Below, you'll find examples demonstrating various Flexbox CSS properties and their
+            effects. Below I've created some visualizations of what these properties do. I encourage you to explore the
+            code, add or remove elements, and observe how Flexbox behaves in
+            comparison to CSS Grid. I'd like this to be a reference page for quick examples of Flexbox properties so
+            they can be implemented into your code quickly and easily.
         </p>
-    </div>
-
-    <h2>Justify Content Center</h2>
-    <div class="flex-container justify-content-center">
-        <div class="flex-item">Centered Item 1</div>
-        <div class="flex-item">Centered Item 2</div>
-        <div class="flex-item">Centered Item 3</div>
-    </div>
-
-    <h2>Justify Content Space Between</h2>
-    <div class="flex-container justify-content-space-between">
-        <div class="flex-item">Spaced Item 1</div>
-        <div class="flex-item">Spaced Item 2</div>
-        <div class="flex-item">Spaced Item 3</div>
     </div>
 
     <h2>Align Items Center</h2>
