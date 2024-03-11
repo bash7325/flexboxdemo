@@ -114,18 +114,29 @@
         .flex-item-auto-margin {
             margin-right: auto; /* This will push all the other items to the end of the container */
         }
+
+        /* styling for things NOT flexbox related, ignore this stuff */
+        .header {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .title {
+            align-self: center;
+        }
+
+        .gif-container:last-child img {
+            transform: scaleX(-1);
+        }
+        
     </style>
 </head>
 
 <body>
     <div class="header">
-        <div class="gif-container">
-            <img src="path_to_your_gif1.gif" alt="Gif 1">
-        </div>
+        <img src="./resources/Images/flexarm.gif" alt="Gif 1" style="width: 20%; height: auto;">
         <h1 class="title">FLEXBOX DEMO</h1>
-        <div class="gif-container">
-            <img src="path_to_your_gif2.gif" alt="Gif 2">
-        </div>
+        <img src="./resources/Images/flexarm.gif" alt="Gif 2" style="width: 20%; height: auto;transform: scaleX(-1);">
     </div>
     <h2>Justify Content Center</h2>
     <div class="flex-container justify-content-center">
