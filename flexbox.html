@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Flexbox Example</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .flex-container {
+            display: flex; /* This enables a flex context for all its direct children. VERY IMPORTANT. Need the parent flex container for any of the children to flex. */
+            width: 80%;
+            height: 500px;
+            background-color: #f0f0f0;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .flex-item {
+            flex: 0 0 50px; /* This sets the flex-grow to 0, flex-shrink to 0, and flex-basis to 50px. */
+            padding: 10px;
+            text-align: center;
+            background-color: #3498db;
+            color: #ffffff;
+            border-right: 1px solid #ffffff;
+        }
+
+        .flex-item:not(:last-child) {
+            border-right: 1px solid #ffffff;
+        }
+
+        .justify-content-center { /* This centers the flex items along the line. */
+            justify-content: center;
+        }
+
+        .justify-content-space-between { /* This distributes the flex items evenly in the container. */
+            justify-content: space-between;
+        }
+
+        .align-items-center { /* This centers the flex items along the cross axis. */
+            align-items: center;
+        }
+
+        .flex-item-small {
+        height: 50px;
+        }
+
+        .flex-item-medium {
+            height: 100px;
+        }
+
+        .flex-item-large {
+            height: 200px;
+        }
+
+        .flex-direction-column { /* This sets the flex direction to column. */
+            flex-direction: column;
+        }
+
+        .flex-direction-column .flex-item {
+        border: 1px solid #ffffff; /* Add a border to the flex items */
+        }
+
+        .flex-wrap { /* This allows the flex items to wrap onto multiple lines. */
+            flex-wrap: wrap;
+        }
+
+        .flex-grow { /* This allows the flex item to grow to fill the container. */
+            flex: 1 0 auto;
+        }
+
+        .order { /* This sets the order of the flex items. Since there are 3 elements in here, this places the first at the third position (it's 0 based)   */ 
+            order: 2;
+        }
+
+        .align-self-flex-end { /* This aligns the flex item at the end of the container. */
+            align-self: flex-end;
+        }
+
+        .flex-basis { 
+            flex-basis: 500px;
+        }
+        
+        .flex-container-shrink {
+            display: flex;
+            width: 500px; 
+            height: 500px;
+            background-color: #f0f0f0;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .flex-item-shrink {
+            flex: 0 1 300px; /* (grow, shrink, basis) This sets the flex-grow to 0, flex-shrink to 1, and flex-basis to 300px. */
+            padding: 10px;
+            text-align: center;
+            background-color: #3498db;
+            color: #ffffff;
+            border-right: 1px solid #ffffff;
+        }
+
+        .flex-item-shrink-more {
+            flex: 0 2 500px; /* This sets the flex-grow to 0, flex-shrink to 2 (this is a factor of 2, so times 2), and flex-basis to 500px. */
+        }
+
+        .flex-item-auto-margin {
+            margin-right: auto; /* This will push all the other items to the end of the container */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="gif-container">
+            <img src="path_to_your_gif1.gif" alt="Gif 1">
+        </div>
+        <h1 class="title">FLEXBOX DEMO</h1>
+        <div class="gif-container">
+            <img src="path_to_your_gif2.gif" alt="Gif 2">
+        </div>
+    </div>
+    <h2>Justify Content Center</h2>
+    <div class="flex-container justify-content-center">
+        <div class="flex-item">Centered Item 1</div>
+        <div class="flex-item">Centered Item 2</div>
+        <div class="flex-item">Centered Item 3</div>
+    </div>
+
+    <h2>Justify Content Space Between</h2>
+    <div class="flex-container justify-content-space-between">
+        <div class="flex-item">Spaced Item 1</div>
+        <div class="flex-item">Spaced Item 2</div>
+        <div class="flex-item">Spaced Item 3</div>
+    </div>
+
+    <h2>Align Items Center</h2>
+    <div class="flex-container align-items-center">
+        <div class="flex-item flex-item-small">Small Item</div>
+        <div class="flex-item flex-item-medium">Medium Item</div>
+        <div class="flex-item flex-item-large">Large Item</div>
+    </div>
+
+    <h2>Flex Direction Column</h2>
+    <div class="flex-container flex-direction-column">
+        <div class="flex-item">Column Item 1</div>
+        <div class="flex-item">Column Item 2</div>
+        <div class="flex-item">Column Item 3</div>
+        <div class="flex-item">Column Item 4</div>
+        <div class="flex-item">Column Item 5</div>
+    </div>
+
+    <h2>Flex Wrap</h2>
+    <div class="flex-container flex-wrap">
+        <div class="flex-item">Wrapped Item 1</div>
+        <div class="flex-item">Wrapped Item 2</div>
+        <div class="flex-item">Wrapped Item 3</div>
+        <div class="flex-item">Wrapped Item 4</div>
+        <div class="flex-item">Wrapped Item 5</div>
+        <div class="flex-item">Wrapped Item 6</div>
+        <div class="flex-item">Wrapped Item 7</div>
+        <div class="flex-item">Wrapped Item 8</div>
+        <div class="flex-item">Wrapped Item 9</div>
+        <div class="flex-item">Wrapped Item 10</div>
+        <div class="flex-item">Wrapped Item 11</div>
+        <div class="flex-item">Wrapped Item 12</div>
+        <div class="flex-item">Wrapped Item 13</div>
+        <div class="flex-item">Wrapped Item 14</div>
+        <div class="flex-item">Wrapped Item 15</div>
+        <div class="flex-item">Wrapped Item 16</div>
+        <div class="flex-item">Wrapped Item 17</div>
+        <div class="flex-item">Wrapped Item 18</div>
+        <div class="flex-item">Wrapped Item 19</div>
+        <div class="flex-item">Wrapped Item 20</div>
+    </div>
+
+    <h2>Flex Grow</h2>
+    <div class="flex-container">
+        <div class="flex-item flex-grow">This bad boy grows to fill the void because of the flex-grow property</div>
+        <div class="flex-item">Non-growing Item 2</div>
+        <div class="flex-item">Non-growing Item 3</div>
+    </div>
+
+    <h2>Order</h2>
+    <div class="flex-container">
+        <div class="flex-item order">Ordered Last Item 1</div>
+        <div class="flex-item">Ordered Item 2</div>
+        <div class="flex-item">Ordered Item 3</div>
+    </div>
+    <h2>Align Self Flex End</h2>
+    <div class="flex-container">
+        <div class="flex-item align-self-flex-end">This aligns at the bottom</div>
+        <div class="flex-item flex-item-small">Item 2</div>
+        <div class="flex-item flex-item-medium">Item 3</div>
+        <div class="flex-item flex-item-large">Item 4</div>
+        <div class="flex-item flex-item-small">Item 5</div>
+    </div>
+
+    <h2>Flex Shrink</h2>
+    <div class="flex-container-shrink">
+        <div class="flex-item-shrink">This item will shrink</div>
+        <div class="flex-item-shrink flex-item-shrink-more">This item will shrink twice as much</div>
+        <div class="flex-item-shrink">This item will shrink</div>
+    </div>
+
+    <h2>Flex Basis</h2>
+    <div class="flex-container">
+        <div class="flex-item flex-basis">This item has a larger initial size</div>
+        <div class="flex-item">Item 2</div>
+        <div class="flex-item">Item 3</div>
+    </div>
+    <h2>Auto Margins for Alignment</h2>
+<div class="flex-container">
+    <div class="flex-item flex-item-auto-margin">Item 1</div>
+    <div class="flex-item">Item 2</div>
+    <div class="flex-item">Item 3</div>
+</div>
+</body>
+
+</html>
