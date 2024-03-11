@@ -13,6 +13,8 @@
             align-items: center;
             height: 100vh;
             margin: 0;
+            padding-bottom: 50px;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
         }
 
         .flex-container {
@@ -115,7 +117,9 @@
             margin-right: auto; /* This will push all the other items to the end of the container */
         }
 
+        /*-----------------------------------------------------------*/
         /* styling for things NOT flexbox related, ignore this stuff */
+        /*-----------------------------------------------------------*/
         .header {
             display: flex;
             justify-content: space-between;
@@ -128,11 +132,26 @@
         .gif-container:last-child img {
             transform: scaleX(-1);
         }
+
+        footer {
+            left: 0; 
+            bottom: 0; 
+            width: 100%; 
+            background-color: #f0f0f0; 
+            color: black; 
+            text-align: center; 
+            padding: 10px;
+        }
         
     </style>
 </head>
 
 <body>
+    <nav style="background-color: #f0f0f0; padding: 10px;">
+        <a href="https://flexboxfroggy.com/" target="_blank" style="margin-right: 10px;">Flexbox Froggy</a>
+        <a href="https://www.w3schools.com/css/css3_flexbox.asp" target="_blank" style="margin-right: 10px;">W3 Schools</a>
+        <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank" style="margin-right: 10px;">CSS Tricks</a>
+    </nav>
     <div class="header">
         <img src="./resources/Images/flexarm.gif" alt="Gif 1" style="width: 20%; height: auto;">
         <h1 class="title">FLEXBOX DEMO</h1>
@@ -233,6 +252,9 @@
     <div class="flex-item">Item 2</div>
     <div class="flex-item">Item 3</div>
 </div>
+<footer>
+    Made with ❤️ by Ashby for JW
+</footer>
 </body>
 
 </html>
