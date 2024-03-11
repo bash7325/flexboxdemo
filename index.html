@@ -18,7 +18,8 @@
         }
 
         .flex-container {
-            display: flex; /* This enables a flex context for all its direct children. VERY IMPORTANT. Need the parent flex container for any of the children to flex. */
+            display: flex;
+            /* This enables the flexbox for all its direct children. VERY IMPORTANT. Need the parent flex container for any of the children to flex. */
             width: 80%;
             height: 500px;
             background-color: #f0f0f0;
@@ -27,7 +28,8 @@
         }
 
         .flex-item {
-            flex: 0 0 50px; /* This sets the flex-grow to 0, flex-shrink to 0, and flex-basis to 50px. */
+            flex: 0 0 50px;
+            /* This sets the flex-grow to 0, flex-shrink to 0, and flex-basis to 50px. */
             padding: 10px;
             text-align: center;
             background-color: #3498db;
@@ -39,20 +41,23 @@
             border-right: 1px solid #ffffff;
         }
 
-        .justify-content-center { /* This centers the flex items along the line. */
+        .justify-content-center {
+            /* This centers the flex items along the line. */
             justify-content: center;
         }
 
-        .justify-content-space-between { /* This distributes the flex items evenly in the container. */
+        .justify-content-space-between {
+            /* This distributes the flex items evenly in the container. */
             justify-content: space-between;
         }
 
-        .align-items-center { /* This centers the flex items along the cross axis. */
+        .align-items-center {
+            /* This centers the flex items along the cross axis. */
             align-items: center;
         }
 
         .flex-item-small {
-        height: 50px;
+            height: 50px;
         }
 
         .flex-item-medium {
@@ -63,37 +68,43 @@
             height: 200px;
         }
 
-        .flex-direction-column { /* This sets the flex direction to column. */
+        .flex-direction-column {
+            /* This sets the flex direction to column. */
             flex-direction: column;
         }
 
         .flex-direction-column .flex-item {
-        border: 1px solid #ffffff; /* Add a border to the flex items */
+            border: 1px solid #ffffff;
+            /* Add a border to the flex items */
         }
 
-        .flex-wrap { /* This allows the flex items to wrap onto multiple lines. */
+        .flex-wrap {
+            /* This allows the flex items to wrap onto multiple lines. */
             flex-wrap: wrap;
         }
 
-        .flex-grow { /* This allows the flex item to grow to fill the container. */
+        .flex-grow {
+            /* This allows the flex item to grow to fill the container. */
             flex: 1 0 auto;
         }
 
-        .order { /* This sets the order of the flex items. Since there are 3 elements in here, this places the first at the third position (it's 0 based)   */ 
+        .order {
+            /* This sets the order of the flex items. Since there are 3 elements in here, this places the first at the third position (it's 0 based)   */
             order: 2;
         }
 
-        .align-self-flex-end { /* This aligns the flex item at the end of the container. */
+        .align-self-flex-end {
+            /* This aligns the flex item at the end of the container. */
             align-self: flex-end;
         }
 
-        .flex-basis { 
+        .flex-basis {
             flex-basis: 500px;
         }
-        
+
         .flex-container-shrink {
             display: flex;
-            width: 500px; 
+            width: 500px;
             height: 500px;
             background-color: #f0f0f0;
             padding: 20px;
@@ -101,7 +112,8 @@
         }
 
         .flex-item-shrink {
-            flex: 0 1 300px; /* (grow, shrink, basis) This sets the flex-grow to 0, flex-shrink to 1, and flex-basis to 300px. */
+            flex: 0 1 300px;
+            /* (grow, shrink, basis) This sets the flex-grow to 0, flex-shrink to 1, and flex-basis to 300px. */
             padding: 10px;
             text-align: center;
             background-color: #3498db;
@@ -110,12 +122,41 @@
         }
 
         .flex-item-shrink-more {
-            flex: 0 2 500px; /* This sets the flex-grow to 0, flex-shrink to 2 (this is a factor of 2, so times 2), and flex-basis to 500px. */
+            flex: 0 2 500px;
+            /* This sets the flex-grow to 0, flex-shrink to 2 (this is a factor of 2, so times 2), and flex-basis to 500px. */
         }
 
         .flex-item-auto-margin {
-            margin-right: auto; /* This will push all the other items to the end of the container */
+            margin-right: auto;
+            /* This will push all the other items to the end of the container */
         }
+
+        /* Axis refers to whether it is a row or column (so a horizontal or veritcal axis) */
+        /* Aligns flex items at the start of the flex container along the main axis */
+        .flex-container.justify-content-flex-start {
+            justify-content: flex-start;
+        }
+
+        /* Centers the flex items along the main axis of the flex container */
+        .flex-container.justify-content-center {
+            justify-content: center;
+        }
+
+        /* Aligns flex items at the end of the flex container along the main axis */
+        .flex-container.justify-content-flex-end {
+            justify-content: flex-end;
+        }
+
+        /* Evenly distributes flex items along the main axis with space between them */
+        .flex-container.justify-content-space-between {
+            justify-content: space-between;
+        }
+
+        /* Evenly distributes flex items along the main axis with space around them */
+        .flex-container.justify-content-space-around {
+            justify-content: space-around;
+        }
+
 
         /*-----------------------------------------------------------*/
         /* styling for things NOT flexbox related, ignore this stuff */
@@ -134,29 +175,66 @@
         }
 
         footer {
-            left: 0; 
-            bottom: 0; 
-            width: 100%; 
-            background-color: #f0f0f0; 
-            color: black; 
-            text-align: center; 
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: #f0f0f0;
+            color: black;
+            text-align: center;
             padding: 10px;
         }
-        
+
+        .explanation {
+            width: 80%;
+            text-align: center;
+            padding: 20px;
+            background-color: #f0f0f0;
+            margin-bottom: 20px;
+            margin-top: 20px;
+        }
+
+        .underline {
+            margin: 0;
+            text-align: center;
+            text-decoration: underline;
+        }
     </style>
 </head>
+<!-- remember, the whole body is in a flex container from above ^^^ -->
 
 <body>
     <nav style="background-color: #f0f0f0; padding: 10px;">
+        <h3 class="underline">Resources</h3>
         <a href="https://flexboxfroggy.com/" target="_blank" style="margin-right: 10px;">Flexbox Froggy</a>
-        <a href="https://www.w3schools.com/css/css3_flexbox.asp" target="_blank" style="margin-right: 10px;">W3 Schools</a>
-        <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank" style="margin-right: 10px;">CSS Tricks</a>
+        <a href="https://www.w3schools.com/css/css3_flexbox.asp" target="_blank" style="margin-right: 10px;">W3
+            Schools</a>
+        <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank"
+            style="margin-right: 10px;">CSS Tricks</a>
     </nav>
+    <img src="./resources/Images/fox.jpg" alt="Right Image" style="margin-left: 10px;width:10%;">
+
     <div class="header">
         <img src="./resources/Images/flexarm.gif" alt="Gif 1" style="width: 20%; height: auto;">
         <h1 class="title">FLEXBOX DEMO</h1>
         <img src="./resources/Images/flexarm.gif" alt="Gif 2" style="width: 20%; height: auto;transform: scaleX(-1);">
     </div>
+    <div class="flex-container explanation">
+        <p>Flexbox is a one dimensional CSS layout system as opposed to grids two. Rather than using floats,
+            inline-block, etc
+            to organize child elements in a parent container you use flexboxes awesome properties to neatly and often
+            more easily
+            align and organize these elements. Flexbox is great for smaller layouts like components within a page rather
+            than
+            for organizing the whole page itself. Flexbox is like arranging blocks in a line, where grid is like
+            building a
+            puzzle with rows and columns. Visit the resources at top for in depth explanations and a game. See the
+            examples
+            below for different flexbox CSS properties and what they do. I encourage you top view the code, add and
+            remove
+            elements and see how flexbox behaves compared to grid.
+        </p>
+    </div>
+
     <h2>Justify Content Center</h2>
     <div class="flex-container justify-content-center">
         <div class="flex-item">Centered Item 1</div>
@@ -246,15 +324,47 @@
         <div class="flex-item">Item 2</div>
         <div class="flex-item">Item 3</div>
     </div>
+
     <h2>Auto Margins for Alignment</h2>
-<div class="flex-container">
-    <div class="flex-item flex-item-auto-margin">Item 1</div>
-    <div class="flex-item">Item 2</div>
-    <div class="flex-item">Item 3</div>
-</div>
-<footer>
-    Made with ❤️ by Ashby for JW
-</footer>
+    <div class="flex-container">
+        <div class="flex-item flex-item-auto-margin">Item 1</div>
+        <div class="flex-item">Item 2</div>
+        <div class="flex-item">Item 3</div>
+    </div>
+    <h1>Flex Justify Properties</h1>
+    <h3>Justify Content Flex Start</h3>
+    <div class="flex-container justify-content-flex-start">
+        <div class="flex-item">Item 1</div>
+        <div class="flex-item">Item 2</div>
+        <div class="flex-item">Item 3</div>
+    </div>
+    <h3>Justify Content Center</h3>
+    <div class="flex-container justify-content-center">
+        <div class="flex-item">Item 1</div>
+        <div class="flex-item">Item 2</div>
+        <div class="flex-item">Item 3</div>
+    </div>
+    <h3>Justify Content Flex End</h3>
+    <div class="flex-container justify-content-flex-end">
+        <div class="flex-item">Item 1</div>
+        <div class="flex-item">Item 2</div>
+        <div class="flex-item">Item 3</div>
+    </div>
+    <h3>Justify Content Space Between</h3>
+    <div class="flex-container justify-content-space-between">
+        <div class="flex-item">Item 1</div>
+        <div class="flex-item">Item 2</div>
+        <div class="flex-item">Item 3</div>
+    </div>
+    <h3>Justify Content Space Around</h3>
+    <div class="flex-container justify-content-space-around">
+        <div class="flex-item">Item 1</div>
+        <div class="flex-item">Item 2</div>
+        <div class="flex-item">Item 3</div>
+    </div>
+    <footer>
+        Made with ❤️ by Ashby for JW
+    </footer>
 </body>
 
 </html>
